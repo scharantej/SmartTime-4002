@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Time</title>
+</head>
+<body>
+<h1>Smart Time</h1>
+<form action="/update" method="POST">
+{% for task, time_slot in zip(tasks, time_slots) %}
+<label for="{{ task }}">{{ task }}:</label>
+<input type="text" name="task" id="{{ task }}" value="{{ task }}">
+<br>
+<label for="{{ time_slot }}">{{ time_slot }}:</label>
+<input type="text" name="time_slot" id="{{ time_slot }}" value="{{ time_slot }}">
+<br>
+{% endfor %}
+<input type="submit" value="Update">
+</form>
+</body>
+</html>
+
