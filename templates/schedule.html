@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Time</title>
+</head>
+<body>
+<h1>Smart Time</h1>
+<ul>
+{% for task, time_slot in zip(tasks, time_slots) %}
+<li>{{ task }}: {{ time_slot }}</li>
+{% endfor %}
+</ul>
+<a href="/edit">Edit</a>
+</body>
+</html>
+
+
